@@ -27,24 +27,26 @@ An IoT-based smart home security and monitoring system built with an ESP8266 Nod
 📱 Mobile-friendly user interface
 
 🧰 Components Required
-Component	Quantity
-ESP8266 NodeMCU	1
-MQ135 air-quality sensor	1
-16x2 I2C LCD display	1
-Relay module for door lock	1
-Relay module for auxiliary appliance	1
-Door switch or magnetic reed switch	1
-Electronic door lock or solenoid lock	1
-5 V power supply	1
-Jumper wires	As required
+| Component                             | Quantity    |
+| ------------------------------------- | ----------- |
+| ESP8266 NodeMCU                       | 1           |
+| MQ135 air-quality sensor              | 1           |
+| 16x2 I2C LCD display                  | 1           |
+| Relay module for door lock            | 1           |
+| Relay module for auxiliary appliance  | 1           |
+| Door switch or magnetic reed switch   | 1           |
+| Electronic door lock or solenoid lock | 1           |
+| 5 V power supply                      | 1           |
+| Jumper wires                          | As required |
 🔌 Pin Connections
-Device	NodeMCU Pin	ESP8266 GPIO
-MQ135 analog output	A0	ADC
-Door-lock relay	D6	GPIO12
-Auxiliary relay	D7	GPIO13
-Door switch	D5	GPIO14
-LCD SDA	D2	GPIO4
-LCD SCL	D1	GPIO5
+| Device              | NodeMCU Pin | ESP8266 GPIO |
+| ------------------- | ----------- | ------------ |
+| MQ135 analog output | A0          | ADC          |
+| Door-lock relay     | D6          | GPIO12       |
+| Auxiliary relay     | D7          | GPIO13       |
+| Door switch         | D5          | GPIO14       |
+| LCD SDA             | D2          | GPIO4        |
+| LCD SCL             | D1          | GPIO5        |
 ⚠️ Confirm the relay module logic before connecting the lock. This project assumes an active-LOW relay, where LOW turns the relay on and HIGH turns it off.
 
 🧠 System Operation
@@ -69,10 +71,11 @@ The switch uses the ESP8266 internal pull-up resistor through INPUT_PULLUP.
 🌫️ Air Quality
 The MQ135 sensor is read through the ESP8266 analog input. The current project uses these approximate thresholds:
 
-MQ135 Value	Status
-Below 300	✅ GOOD
-300–699	⚠️ MODERATE
-700 and above	🚨 HAZARDOUS
+| MQ135 Value   | Status       |
+| ------------- | ------------ |
+| Below 300     | ✅ GOOD       |
+| 300–699       | ⚠️ MODERATE  |
+| 700 and above | 🚨 HAZARDOUS |
 ℹ️ These thresholds are for an approximate project demonstration. Accurate gas concentration measurement requires sensor warm-up, calibration, and environmental testing.
 
 🖥️ LCD Display
@@ -232,7 +235,7 @@ Contributions are welcome! 🎉
 📤 Submit a pull request.
 
 📄 License
-This project is released under the NoLicense. You are free to use, modify, and distribute the project with proper attribution.
+This project is released under the No License. You are free to use, modify, and distribute the project with proper attribution.
 
 👨‍💻 Author
 RAJ Bari
